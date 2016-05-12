@@ -1,0 +1,2764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tradeservice.concinnitymarketing.biz/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tradeservice.concinnitymarketing.biz/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tradeservice.concinnitymarketing.biz/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSessionInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Environ" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSessionInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSessionInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckWebSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Parm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm5" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm6" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckWebSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckWebSessionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TradeLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Parm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm5" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TradeLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TradeLoginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TradeLoginJSONP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Parm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm5" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TradeLoginJSONPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TradeLoginJSONPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TradeLoginJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RemoteIP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Environment" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GUID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TradeLoginJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TradeLoginJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestJSON">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestJSONResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Parm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm5" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm6" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm7" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm8" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm9" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Parm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Parm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountSummaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Parm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountVPISummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Parm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountVPISummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountVPISummaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountVPIMapData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Parm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountVPIMapDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountVPIMapDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountVMSSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Parm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountVMSSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountVMSSummaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountVMSMapData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Parm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountVMSMapDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountVMSMapDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOptimizer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Parm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm5" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm6" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm7" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm8" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm9" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm10" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm11" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm12" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm13" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm14" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm15" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm16" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOptimizerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOptimizerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountsInJourney">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Parm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AccountsInJourneyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountsInJourneyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZipsInJourney">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Parm1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parm3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZipsInJourneyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetZipsInJourneyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RemoteIP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Environ" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VerifyUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VerifyUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetailLocator">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Brand" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Radius" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetailLocatorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetailLocatorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetailLocatorStores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Brand" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Radius" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StoreTotal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetailLocatorStoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetailLocatorStoresResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetailLocatorStoreDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Brand" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Radius" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StoreTotal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetailLocatorStoreDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetailLocatorStoreDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PremierRetailLocatorComb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Radius" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PremierRetailLocatorCombResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PremierRetailLocatorCombResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MontclairRetailLocator">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Radius" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MontclairRetailLocatorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MontclairRetailLocatorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="USAGoldRetailLocatorComb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Radius" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="USAGoldRetailLocatorCombResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="USAGoldRetailLocatorCombResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FortunaRetailLocator">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Radius" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FortunaRetailLocatorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FortunaRetailLocatorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetailLocatorComb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Radius" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetailLocatorCombResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetailLocatorCombResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetailLocatorXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Radius" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetailLocatorXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetailLocatorXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetailLocatorLatLong">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Brand" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Lat" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Lng" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="StoreTotal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetailLocatorLatLongResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetailLocatorLatLongResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSessionInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSessionInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckWebSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckWebSession" />
+  </wsdl:message>
+  <wsdl:message name="CheckWebSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckWebSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:TradeLogin" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:TradeLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginJSONPSoapIn">
+    <wsdl:part name="parameters" element="tns:TradeLoginJSONP" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginJSONPSoapOut">
+    <wsdl:part name="parameters" element="tns:TradeLoginJSONPResponse" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:TradeLoginJSON" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:TradeLoginJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:TestJSON" />
+  </wsdl:message>
+  <wsdl:message name="TestJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:TestJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccountSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:AccountSearch" />
+  </wsdl:message>
+  <wsdl:message name="AccountSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:AccountSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccount" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountSummary" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVPISummarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountVPISummary" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVPISummarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountVPISummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVPIMapDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountVPIMapData" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVPIMapDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountVPIMapDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVMSSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountVMSSummary" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVMSSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountVMSSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVMSMapDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountVMSMapData" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVMSMapDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountVMSMapDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOptimizerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOptimizer" />
+  </wsdl:message>
+  <wsdl:message name="GetOptimizerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOptimizerResponse" />
+  </wsdl:message>
+  <wsdl:message name="AccountsInJourneySoapIn">
+    <wsdl:part name="parameters" element="tns:AccountsInJourney" />
+  </wsdl:message>
+  <wsdl:message name="AccountsInJourneySoapOut">
+    <wsdl:part name="parameters" element="tns:AccountsInJourneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetZipsInJourneySoapIn">
+    <wsdl:part name="parameters" element="tns:GetZipsInJourney" />
+  </wsdl:message>
+  <wsdl:message name="GetZipsInJourneySoapOut">
+    <wsdl:part name="parameters" element="tns:GetZipsInJourneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyUserSoapIn">
+    <wsdl:part name="parameters" element="tns:VerifyUser" />
+  </wsdl:message>
+  <wsdl:message name="VerifyUserSoapOut">
+    <wsdl:part name="parameters" element="tns:VerifyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorSoapIn">
+    <wsdl:part name="parameters" element="tns:RetailLocator" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorSoapOut">
+    <wsdl:part name="parameters" element="tns:RetailLocatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorStoresSoapIn">
+    <wsdl:part name="parameters" element="tns:RetailLocatorStores" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorStoresSoapOut">
+    <wsdl:part name="parameters" element="tns:RetailLocatorStoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorStoreDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:RetailLocatorStoreDetails" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorStoreDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:RetailLocatorStoreDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PremierRetailLocatorCombSoapIn">
+    <wsdl:part name="parameters" element="tns:PremierRetailLocatorComb" />
+  </wsdl:message>
+  <wsdl:message name="PremierRetailLocatorCombSoapOut">
+    <wsdl:part name="parameters" element="tns:PremierRetailLocatorCombResponse" />
+  </wsdl:message>
+  <wsdl:message name="MontclairRetailLocatorSoapIn">
+    <wsdl:part name="parameters" element="tns:MontclairRetailLocator" />
+  </wsdl:message>
+  <wsdl:message name="MontclairRetailLocatorSoapOut">
+    <wsdl:part name="parameters" element="tns:MontclairRetailLocatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="USAGoldRetailLocatorCombSoapIn">
+    <wsdl:part name="parameters" element="tns:USAGoldRetailLocatorComb" />
+  </wsdl:message>
+  <wsdl:message name="USAGoldRetailLocatorCombSoapOut">
+    <wsdl:part name="parameters" element="tns:USAGoldRetailLocatorCombResponse" />
+  </wsdl:message>
+  <wsdl:message name="FortunaRetailLocatorSoapIn">
+    <wsdl:part name="parameters" element="tns:FortunaRetailLocator" />
+  </wsdl:message>
+  <wsdl:message name="FortunaRetailLocatorSoapOut">
+    <wsdl:part name="parameters" element="tns:FortunaRetailLocatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorCombSoapIn">
+    <wsdl:part name="parameters" element="tns:RetailLocatorComb" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorCombSoapOut">
+    <wsdl:part name="parameters" element="tns:RetailLocatorCombResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:RetailLocatorXML" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:RetailLocatorXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorLatLongSoapIn">
+    <wsdl:part name="parameters" element="tns:RetailLocatorLatLong" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorLatLongSoapOut">
+    <wsdl:part name="parameters" element="tns:RetailLocatorLatLongResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionInfoHttpGetIn">
+    <wsdl:part name="GUID" type="s:string" />
+    <wsdl:part name="Environ" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CheckWebSessionHttpGetIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+    <wsdl:part name="Parm4" type="s:string" />
+    <wsdl:part name="Parm5" type="s:string" />
+    <wsdl:part name="Parm6" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckWebSessionHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginHttpGetIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+    <wsdl:part name="Parm4" type="s:string" />
+    <wsdl:part name="Parm5" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginJSONPHttpGetIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+    <wsdl:part name="Parm4" type="s:string" />
+    <wsdl:part name="Parm5" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginJSONPHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginJSONHttpGetIn">
+    <wsdl:part name="ID" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="RemoteIP" type="s:string" />
+    <wsdl:part name="Environment" type="s:string" />
+    <wsdl:part name="GUID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestJSONHttpGetIn" />
+  <wsdl:message name="TestJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AccountSearchHttpGetIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+    <wsdl:part name="Parm4" type="s:string" />
+    <wsdl:part name="Parm5" type="s:string" />
+    <wsdl:part name="Parm6" type="s:string" />
+    <wsdl:part name="Parm7" type="s:string" />
+    <wsdl:part name="Parm8" type="s:string" />
+    <wsdl:part name="Parm9" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AccountSearchHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountHttpGetIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountSummaryHttpGetIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountSummaryHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailsHttpGetIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVPISummaryHttpGetIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVPISummaryHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVPIMapDataHttpGetIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVPIMapDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVMSSummaryHttpGetIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVMSSummaryHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVMSMapDataHttpGetIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVMSMapDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetOptimizerHttpGetIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+    <wsdl:part name="Parm4" type="s:string" />
+    <wsdl:part name="Parm5" type="s:string" />
+    <wsdl:part name="Parm6" type="s:string" />
+    <wsdl:part name="Parm7" type="s:string" />
+    <wsdl:part name="Parm8" type="s:string" />
+    <wsdl:part name="Parm9" type="s:string" />
+    <wsdl:part name="Parm10" type="s:string" />
+    <wsdl:part name="Parm11" type="s:string" />
+    <wsdl:part name="Parm12" type="s:string" />
+    <wsdl:part name="Parm13" type="s:string" />
+    <wsdl:part name="Parm14" type="s:string" />
+    <wsdl:part name="Parm15" type="s:string" />
+    <wsdl:part name="Parm16" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOptimizerHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AccountsInJourneyHttpGetIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AccountsInJourneyHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetZipsInJourneyHttpGetIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZipsInJourneyHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="VerifyUserHttpGetIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="RemoteIP" type="s:string" />
+    <wsdl:part name="Environ" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorHttpGetIn">
+    <wsdl:part name="Brand" type="s:string" />
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorStoresHttpGetIn">
+    <wsdl:part name="Brand" type="s:string" />
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+    <wsdl:part name="StoreTotal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorStoresHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorStoreDetailsHttpGetIn">
+    <wsdl:part name="Brand" type="s:string" />
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+    <wsdl:part name="StoreTotal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorStoreDetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="PremierRetailLocatorCombHttpGetIn">
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PremierRetailLocatorCombHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="MontclairRetailLocatorHttpGetIn">
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MontclairRetailLocatorHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="USAGoldRetailLocatorCombHttpGetIn">
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="USAGoldRetailLocatorCombHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FortunaRetailLocatorHttpGetIn">
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FortunaRetailLocatorHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorCombHttpGetIn">
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorCombHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorXMLHttpGetIn">
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorXMLHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorLatLongHttpGetIn">
+    <wsdl:part name="Brand" type="s:string" />
+    <wsdl:part name="Lat" type="s:string" />
+    <wsdl:part name="Lng" type="s:string" />
+    <wsdl:part name="StoreTotal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorLatLongHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionInfoHttpPostIn">
+    <wsdl:part name="GUID" type="s:string" />
+    <wsdl:part name="Environ" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSessionInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="CheckWebSessionHttpPostIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+    <wsdl:part name="Parm4" type="s:string" />
+    <wsdl:part name="Parm5" type="s:string" />
+    <wsdl:part name="Parm6" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckWebSessionHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginHttpPostIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+    <wsdl:part name="Parm4" type="s:string" />
+    <wsdl:part name="Parm5" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginJSONPHttpPostIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+    <wsdl:part name="Parm4" type="s:string" />
+    <wsdl:part name="Parm5" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginJSONPHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginJSONHttpPostIn">
+    <wsdl:part name="ID" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="RemoteIP" type="s:string" />
+    <wsdl:part name="Environment" type="s:string" />
+    <wsdl:part name="GUID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TradeLoginJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestJSONHttpPostIn" />
+  <wsdl:message name="TestJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AccountSearchHttpPostIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+    <wsdl:part name="Parm4" type="s:string" />
+    <wsdl:part name="Parm5" type="s:string" />
+    <wsdl:part name="Parm6" type="s:string" />
+    <wsdl:part name="Parm7" type="s:string" />
+    <wsdl:part name="Parm8" type="s:string" />
+    <wsdl:part name="Parm9" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AccountSearchHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountHttpPostIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountSummaryHttpPostIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountSummaryHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailsHttpPostIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVPISummaryHttpPostIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVPISummaryHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVPIMapDataHttpPostIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVPIMapDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVMSSummaryHttpPostIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVMSSummaryHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVMSMapDataHttpPostIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountVMSMapDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetOptimizerHttpPostIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+    <wsdl:part name="Parm4" type="s:string" />
+    <wsdl:part name="Parm5" type="s:string" />
+    <wsdl:part name="Parm6" type="s:string" />
+    <wsdl:part name="Parm7" type="s:string" />
+    <wsdl:part name="Parm8" type="s:string" />
+    <wsdl:part name="Parm9" type="s:string" />
+    <wsdl:part name="Parm10" type="s:string" />
+    <wsdl:part name="Parm11" type="s:string" />
+    <wsdl:part name="Parm12" type="s:string" />
+    <wsdl:part name="Parm13" type="s:string" />
+    <wsdl:part name="Parm14" type="s:string" />
+    <wsdl:part name="Parm15" type="s:string" />
+    <wsdl:part name="Parm16" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOptimizerHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AccountsInJourneyHttpPostIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AccountsInJourneyHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetZipsInJourneyHttpPostIn">
+    <wsdl:part name="Parm1" type="s:string" />
+    <wsdl:part name="Parm2" type="s:string" />
+    <wsdl:part name="Parm3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetZipsInJourneyHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="VerifyUserHttpPostIn">
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="RemoteIP" type="s:string" />
+    <wsdl:part name="Environ" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VerifyUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorHttpPostIn">
+    <wsdl:part name="Brand" type="s:string" />
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorStoresHttpPostIn">
+    <wsdl:part name="Brand" type="s:string" />
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+    <wsdl:part name="StoreTotal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorStoresHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorStoreDetailsHttpPostIn">
+    <wsdl:part name="Brand" type="s:string" />
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+    <wsdl:part name="StoreTotal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorStoreDetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="PremierRetailLocatorCombHttpPostIn">
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PremierRetailLocatorCombHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="MontclairRetailLocatorHttpPostIn">
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MontclairRetailLocatorHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="USAGoldRetailLocatorCombHttpPostIn">
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="USAGoldRetailLocatorCombHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="FortunaRetailLocatorHttpPostIn">
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FortunaRetailLocatorHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorCombHttpPostIn">
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorCombHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorXMLHttpPostIn">
+    <wsdl:part name="Zip" type="s:string" />
+    <wsdl:part name="Radius" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorXMLHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorLatLongHttpPostIn">
+    <wsdl:part name="Brand" type="s:string" />
+    <wsdl:part name="Lat" type="s:string" />
+    <wsdl:part name="Lng" type="s:string" />
+    <wsdl:part name="StoreTotal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetailLocatorLatLongHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:portType name="TradeServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionInfo">
+      <wsdl:input message="tns:GetSessionInfoSoapIn" />
+      <wsdl:output message="tns:GetSessionInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckWebSession">
+      <wsdl:input message="tns:CheckWebSessionSoapIn" />
+      <wsdl:output message="tns:CheckWebSessionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeLogin">
+      <wsdl:input message="tns:TradeLoginSoapIn" />
+      <wsdl:output message="tns:TradeLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeLoginJSONP">
+      <wsdl:input message="tns:TradeLoginJSONPSoapIn" />
+      <wsdl:output message="tns:TradeLoginJSONPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeLoginJSON">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Test JSON Method</wsdl:documentation>
+      <wsdl:input message="tns:TradeLoginJSONSoapIn" />
+      <wsdl:output message="tns:TradeLoginJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestJSON">
+      <wsdl:input message="tns:TestJSONSoapIn" />
+      <wsdl:output message="tns:TestJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountSearch">
+      <wsdl:input message="tns:AccountSearchSoapIn" />
+      <wsdl:output message="tns:AccountSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccount">
+      <wsdl:input message="tns:GetAccountSoapIn" />
+      <wsdl:output message="tns:GetAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountSummary">
+      <wsdl:input message="tns:GetAccountSummarySoapIn" />
+      <wsdl:output message="tns:GetAccountSummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetails">
+      <wsdl:input message="tns:GetAccountDetailsSoapIn" />
+      <wsdl:output message="tns:GetAccountDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVPISummary">
+      <wsdl:input message="tns:GetAccountVPISummarySoapIn" />
+      <wsdl:output message="tns:GetAccountVPISummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVPIMapData">
+      <wsdl:input message="tns:GetAccountVPIMapDataSoapIn" />
+      <wsdl:output message="tns:GetAccountVPIMapDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVMSSummary">
+      <wsdl:input message="tns:GetAccountVMSSummarySoapIn" />
+      <wsdl:output message="tns:GetAccountVMSSummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVMSMapData">
+      <wsdl:input message="tns:GetAccountVMSMapDataSoapIn" />
+      <wsdl:output message="tns:GetAccountVMSMapDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOptimizer">
+      <wsdl:input message="tns:GetOptimizerSoapIn" />
+      <wsdl:output message="tns:GetOptimizerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountsInJourney">
+      <wsdl:input message="tns:AccountsInJourneySoapIn" />
+      <wsdl:output message="tns:AccountsInJourneySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZipsInJourney">
+      <wsdl:input message="tns:GetZipsInJourneySoapIn" />
+      <wsdl:output message="tns:GetZipsInJourneySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUser">
+      <wsdl:input message="tns:VerifyUserSoapIn" />
+      <wsdl:output message="tns:VerifyUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocator">
+      <wsdl:input message="tns:RetailLocatorSoapIn" />
+      <wsdl:output message="tns:RetailLocatorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorStores">
+      <wsdl:input message="tns:RetailLocatorStoresSoapIn" />
+      <wsdl:output message="tns:RetailLocatorStoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorStoreDetails">
+      <wsdl:input message="tns:RetailLocatorStoreDetailsSoapIn" />
+      <wsdl:output message="tns:RetailLocatorStoreDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PremierRetailLocatorComb">
+      <wsdl:input message="tns:PremierRetailLocatorCombSoapIn" />
+      <wsdl:output message="tns:PremierRetailLocatorCombSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MontclairRetailLocator">
+      <wsdl:input message="tns:MontclairRetailLocatorSoapIn" />
+      <wsdl:output message="tns:MontclairRetailLocatorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="USAGoldRetailLocatorComb">
+      <wsdl:input message="tns:USAGoldRetailLocatorCombSoapIn" />
+      <wsdl:output message="tns:USAGoldRetailLocatorCombSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FortunaRetailLocator">
+      <wsdl:input message="tns:FortunaRetailLocatorSoapIn" />
+      <wsdl:output message="tns:FortunaRetailLocatorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorComb">
+      <wsdl:input message="tns:RetailLocatorCombSoapIn" />
+      <wsdl:output message="tns:RetailLocatorCombSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorXML">
+      <wsdl:input message="tns:RetailLocatorXMLSoapIn" />
+      <wsdl:output message="tns:RetailLocatorXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorLatLong">
+      <wsdl:input message="tns:RetailLocatorLatLongSoapIn" />
+      <wsdl:output message="tns:RetailLocatorLatLongSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TradeServiceHttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionInfo">
+      <wsdl:input message="tns:GetSessionInfoHttpGetIn" />
+      <wsdl:output message="tns:GetSessionInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckWebSession">
+      <wsdl:input message="tns:CheckWebSessionHttpGetIn" />
+      <wsdl:output message="tns:CheckWebSessionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeLogin">
+      <wsdl:input message="tns:TradeLoginHttpGetIn" />
+      <wsdl:output message="tns:TradeLoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeLoginJSONP">
+      <wsdl:input message="tns:TradeLoginJSONPHttpGetIn" />
+      <wsdl:output message="tns:TradeLoginJSONPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeLoginJSON">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Test JSON Method</wsdl:documentation>
+      <wsdl:input message="tns:TradeLoginJSONHttpGetIn" />
+      <wsdl:output message="tns:TradeLoginJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestJSON">
+      <wsdl:input message="tns:TestJSONHttpGetIn" />
+      <wsdl:output message="tns:TestJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountSearch">
+      <wsdl:input message="tns:AccountSearchHttpGetIn" />
+      <wsdl:output message="tns:AccountSearchHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccount">
+      <wsdl:input message="tns:GetAccountHttpGetIn" />
+      <wsdl:output message="tns:GetAccountHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountSummary">
+      <wsdl:input message="tns:GetAccountSummaryHttpGetIn" />
+      <wsdl:output message="tns:GetAccountSummaryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetails">
+      <wsdl:input message="tns:GetAccountDetailsHttpGetIn" />
+      <wsdl:output message="tns:GetAccountDetailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVPISummary">
+      <wsdl:input message="tns:GetAccountVPISummaryHttpGetIn" />
+      <wsdl:output message="tns:GetAccountVPISummaryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVPIMapData">
+      <wsdl:input message="tns:GetAccountVPIMapDataHttpGetIn" />
+      <wsdl:output message="tns:GetAccountVPIMapDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVMSSummary">
+      <wsdl:input message="tns:GetAccountVMSSummaryHttpGetIn" />
+      <wsdl:output message="tns:GetAccountVMSSummaryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVMSMapData">
+      <wsdl:input message="tns:GetAccountVMSMapDataHttpGetIn" />
+      <wsdl:output message="tns:GetAccountVMSMapDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOptimizer">
+      <wsdl:input message="tns:GetOptimizerHttpGetIn" />
+      <wsdl:output message="tns:GetOptimizerHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountsInJourney">
+      <wsdl:input message="tns:AccountsInJourneyHttpGetIn" />
+      <wsdl:output message="tns:AccountsInJourneyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZipsInJourney">
+      <wsdl:input message="tns:GetZipsInJourneyHttpGetIn" />
+      <wsdl:output message="tns:GetZipsInJourneyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUser">
+      <wsdl:input message="tns:VerifyUserHttpGetIn" />
+      <wsdl:output message="tns:VerifyUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocator">
+      <wsdl:input message="tns:RetailLocatorHttpGetIn" />
+      <wsdl:output message="tns:RetailLocatorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorStores">
+      <wsdl:input message="tns:RetailLocatorStoresHttpGetIn" />
+      <wsdl:output message="tns:RetailLocatorStoresHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorStoreDetails">
+      <wsdl:input message="tns:RetailLocatorStoreDetailsHttpGetIn" />
+      <wsdl:output message="tns:RetailLocatorStoreDetailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PremierRetailLocatorComb">
+      <wsdl:input message="tns:PremierRetailLocatorCombHttpGetIn" />
+      <wsdl:output message="tns:PremierRetailLocatorCombHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MontclairRetailLocator">
+      <wsdl:input message="tns:MontclairRetailLocatorHttpGetIn" />
+      <wsdl:output message="tns:MontclairRetailLocatorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="USAGoldRetailLocatorComb">
+      <wsdl:input message="tns:USAGoldRetailLocatorCombHttpGetIn" />
+      <wsdl:output message="tns:USAGoldRetailLocatorCombHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FortunaRetailLocator">
+      <wsdl:input message="tns:FortunaRetailLocatorHttpGetIn" />
+      <wsdl:output message="tns:FortunaRetailLocatorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorComb">
+      <wsdl:input message="tns:RetailLocatorCombHttpGetIn" />
+      <wsdl:output message="tns:RetailLocatorCombHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorXML">
+      <wsdl:input message="tns:RetailLocatorXMLHttpGetIn" />
+      <wsdl:output message="tns:RetailLocatorXMLHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorLatLong">
+      <wsdl:input message="tns:RetailLocatorLatLongHttpGetIn" />
+      <wsdl:output message="tns:RetailLocatorLatLongHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TradeServiceHttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionInfo">
+      <wsdl:input message="tns:GetSessionInfoHttpPostIn" />
+      <wsdl:output message="tns:GetSessionInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckWebSession">
+      <wsdl:input message="tns:CheckWebSessionHttpPostIn" />
+      <wsdl:output message="tns:CheckWebSessionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeLogin">
+      <wsdl:input message="tns:TradeLoginHttpPostIn" />
+      <wsdl:output message="tns:TradeLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeLoginJSONP">
+      <wsdl:input message="tns:TradeLoginJSONPHttpPostIn" />
+      <wsdl:output message="tns:TradeLoginJSONPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TradeLoginJSON">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Test JSON Method</wsdl:documentation>
+      <wsdl:input message="tns:TradeLoginJSONHttpPostIn" />
+      <wsdl:output message="tns:TradeLoginJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestJSON">
+      <wsdl:input message="tns:TestJSONHttpPostIn" />
+      <wsdl:output message="tns:TestJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountSearch">
+      <wsdl:input message="tns:AccountSearchHttpPostIn" />
+      <wsdl:output message="tns:AccountSearchHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccount">
+      <wsdl:input message="tns:GetAccountHttpPostIn" />
+      <wsdl:output message="tns:GetAccountHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountSummary">
+      <wsdl:input message="tns:GetAccountSummaryHttpPostIn" />
+      <wsdl:output message="tns:GetAccountSummaryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetails">
+      <wsdl:input message="tns:GetAccountDetailsHttpPostIn" />
+      <wsdl:output message="tns:GetAccountDetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVPISummary">
+      <wsdl:input message="tns:GetAccountVPISummaryHttpPostIn" />
+      <wsdl:output message="tns:GetAccountVPISummaryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVPIMapData">
+      <wsdl:input message="tns:GetAccountVPIMapDataHttpPostIn" />
+      <wsdl:output message="tns:GetAccountVPIMapDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVMSSummary">
+      <wsdl:input message="tns:GetAccountVMSSummaryHttpPostIn" />
+      <wsdl:output message="tns:GetAccountVMSSummaryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVMSMapData">
+      <wsdl:input message="tns:GetAccountVMSMapDataHttpPostIn" />
+      <wsdl:output message="tns:GetAccountVMSMapDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOptimizer">
+      <wsdl:input message="tns:GetOptimizerHttpPostIn" />
+      <wsdl:output message="tns:GetOptimizerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountsInJourney">
+      <wsdl:input message="tns:AccountsInJourneyHttpPostIn" />
+      <wsdl:output message="tns:AccountsInJourneyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZipsInJourney">
+      <wsdl:input message="tns:GetZipsInJourneyHttpPostIn" />
+      <wsdl:output message="tns:GetZipsInJourneyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUser">
+      <wsdl:input message="tns:VerifyUserHttpPostIn" />
+      <wsdl:output message="tns:VerifyUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocator">
+      <wsdl:input message="tns:RetailLocatorHttpPostIn" />
+      <wsdl:output message="tns:RetailLocatorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorStores">
+      <wsdl:input message="tns:RetailLocatorStoresHttpPostIn" />
+      <wsdl:output message="tns:RetailLocatorStoresHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorStoreDetails">
+      <wsdl:input message="tns:RetailLocatorStoreDetailsHttpPostIn" />
+      <wsdl:output message="tns:RetailLocatorStoreDetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PremierRetailLocatorComb">
+      <wsdl:input message="tns:PremierRetailLocatorCombHttpPostIn" />
+      <wsdl:output message="tns:PremierRetailLocatorCombHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MontclairRetailLocator">
+      <wsdl:input message="tns:MontclairRetailLocatorHttpPostIn" />
+      <wsdl:output message="tns:MontclairRetailLocatorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="USAGoldRetailLocatorComb">
+      <wsdl:input message="tns:USAGoldRetailLocatorCombHttpPostIn" />
+      <wsdl:output message="tns:USAGoldRetailLocatorCombHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FortunaRetailLocator">
+      <wsdl:input message="tns:FortunaRetailLocatorHttpPostIn" />
+      <wsdl:output message="tns:FortunaRetailLocatorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorComb">
+      <wsdl:input message="tns:RetailLocatorCombHttpPostIn" />
+      <wsdl:output message="tns:RetailLocatorCombHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorXML">
+      <wsdl:input message="tns:RetailLocatorXMLHttpPostIn" />
+      <wsdl:output message="tns:RetailLocatorXMLHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorLatLong">
+      <wsdl:input message="tns:RetailLocatorLatLongHttpPostIn" />
+      <wsdl:output message="tns:RetailLocatorLatLongHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TradeServiceSoap" type="tns:TradeServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionInfo">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetSessionInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckWebSession">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/CheckWebSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeLogin">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/TradeLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeLoginJSONP">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/TradeLoginJSONP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeLoginJSON">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/TradeLoginJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestJSON">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/TestJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountSearch">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/AccountSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccount">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountSummary">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetAccountSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetails">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetAccountDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVPISummary">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetAccountVPISummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVPIMapData">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetAccountVPIMapData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVMSSummary">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetAccountVMSSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVMSMapData">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetAccountVMSMapData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptimizer">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetOptimizer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountsInJourney">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/AccountsInJourney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZipsInJourney">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetZipsInJourney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUser">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/VerifyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocator">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/RetailLocator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorStores">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/RetailLocatorStores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorStoreDetails">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/RetailLocatorStoreDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PremierRetailLocatorComb">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/PremierRetailLocatorComb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MontclairRetailLocator">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/MontclairRetailLocator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USAGoldRetailLocatorComb">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/USAGoldRetailLocatorComb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FortunaRetailLocator">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/FortunaRetailLocator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorComb">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/RetailLocatorComb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorXML">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/RetailLocatorXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorLatLong">
+      <soap:operation soapAction="http://tradeservice.concinnitymarketing.biz/RetailLocatorLatLong" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TradeServiceSoap12" type="tns:TradeServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionInfo">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetSessionInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckWebSession">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/CheckWebSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeLogin">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/TradeLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeLoginJSONP">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/TradeLoginJSONP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeLoginJSON">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/TradeLoginJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestJSON">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/TestJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountSearch">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/AccountSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccount">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountSummary">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetAccountSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetails">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetAccountDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVPISummary">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetAccountVPISummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVPIMapData">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetAccountVPIMapData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVMSSummary">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetAccountVMSSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVMSMapData">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetAccountVMSMapData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptimizer">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetOptimizer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountsInJourney">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/AccountsInJourney" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZipsInJourney">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/GetZipsInJourney" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUser">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/VerifyUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocator">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/RetailLocator" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorStores">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/RetailLocatorStores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorStoreDetails">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/RetailLocatorStoreDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PremierRetailLocatorComb">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/PremierRetailLocatorComb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MontclairRetailLocator">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/MontclairRetailLocator" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USAGoldRetailLocatorComb">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/USAGoldRetailLocatorComb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FortunaRetailLocator">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/FortunaRetailLocator" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorComb">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/RetailLocatorComb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorXML">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/RetailLocatorXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorLatLong">
+      <soap12:operation soapAction="http://tradeservice.concinnitymarketing.biz/RetailLocatorLatLong" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TradeServiceHttpGet" type="tns:TradeServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionInfo">
+      <http:operation location="/GetSessionInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckWebSession">
+      <http:operation location="/CheckWebSession" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeLogin">
+      <http:operation location="/TradeLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeLoginJSONP">
+      <http:operation location="/TradeLoginJSONP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeLoginJSON">
+      <http:operation location="/TradeLoginJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestJSON">
+      <http:operation location="/TestJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountSearch">
+      <http:operation location="/AccountSearch" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccount">
+      <http:operation location="/GetAccount" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountSummary">
+      <http:operation location="/GetAccountSummary" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetails">
+      <http:operation location="/GetAccountDetails" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVPISummary">
+      <http:operation location="/GetAccountVPISummary" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVPIMapData">
+      <http:operation location="/GetAccountVPIMapData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVMSSummary">
+      <http:operation location="/GetAccountVMSSummary" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVMSMapData">
+      <http:operation location="/GetAccountVMSMapData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptimizer">
+      <http:operation location="/GetOptimizer" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountsInJourney">
+      <http:operation location="/AccountsInJourney" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZipsInJourney">
+      <http:operation location="/GetZipsInJourney" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUser">
+      <http:operation location="/VerifyUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocator">
+      <http:operation location="/RetailLocator" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorStores">
+      <http:operation location="/RetailLocatorStores" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorStoreDetails">
+      <http:operation location="/RetailLocatorStoreDetails" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PremierRetailLocatorComb">
+      <http:operation location="/PremierRetailLocatorComb" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MontclairRetailLocator">
+      <http:operation location="/MontclairRetailLocator" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USAGoldRetailLocatorComb">
+      <http:operation location="/USAGoldRetailLocatorComb" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FortunaRetailLocator">
+      <http:operation location="/FortunaRetailLocator" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorComb">
+      <http:operation location="/RetailLocatorComb" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorXML">
+      <http:operation location="/RetailLocatorXML" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorLatLong">
+      <http:operation location="/RetailLocatorLatLong" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TradeServiceHttpPost" type="tns:TradeServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionInfo">
+      <http:operation location="/GetSessionInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckWebSession">
+      <http:operation location="/CheckWebSession" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeLogin">
+      <http:operation location="/TradeLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeLoginJSONP">
+      <http:operation location="/TradeLoginJSONP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TradeLoginJSON">
+      <http:operation location="/TradeLoginJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestJSON">
+      <http:operation location="/TestJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountSearch">
+      <http:operation location="/AccountSearch" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccount">
+      <http:operation location="/GetAccount" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountSummary">
+      <http:operation location="/GetAccountSummary" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetails">
+      <http:operation location="/GetAccountDetails" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVPISummary">
+      <http:operation location="/GetAccountVPISummary" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVPIMapData">
+      <http:operation location="/GetAccountVPIMapData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVMSSummary">
+      <http:operation location="/GetAccountVMSSummary" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountVMSMapData">
+      <http:operation location="/GetAccountVMSMapData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOptimizer">
+      <http:operation location="/GetOptimizer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountsInJourney">
+      <http:operation location="/AccountsInJourney" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZipsInJourney">
+      <http:operation location="/GetZipsInJourney" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUser">
+      <http:operation location="/VerifyUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocator">
+      <http:operation location="/RetailLocator" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorStores">
+      <http:operation location="/RetailLocatorStores" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorStoreDetails">
+      <http:operation location="/RetailLocatorStoreDetails" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PremierRetailLocatorComb">
+      <http:operation location="/PremierRetailLocatorComb" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MontclairRetailLocator">
+      <http:operation location="/MontclairRetailLocator" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="USAGoldRetailLocatorComb">
+      <http:operation location="/USAGoldRetailLocatorComb" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FortunaRetailLocator">
+      <http:operation location="/FortunaRetailLocator" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorComb">
+      <http:operation location="/RetailLocatorComb" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorXML">
+      <http:operation location="/RetailLocatorXML" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetailLocatorLatLong">
+      <http:operation location="/RetailLocatorLatLong" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TradeService">
+    <wsdl:port name="TradeServiceSoap" binding="tns:TradeServiceSoap">
+      <soap:address location="http://tradeservice.concinnitymarketing.biz/tradeservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TradeServiceSoap12" binding="tns:TradeServiceSoap12">
+      <soap12:address location="http://tradeservice.concinnitymarketing.biz/tradeservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TradeServiceHttpGet" binding="tns:TradeServiceHttpGet">
+      <http:address location="http://tradeservice.concinnitymarketing.biz/tradeservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TradeServiceHttpPost" binding="tns:TradeServiceHttpPost">
+      <http:address location="http://tradeservice.concinnitymarketing.biz/tradeservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

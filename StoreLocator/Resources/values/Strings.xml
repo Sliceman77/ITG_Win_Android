@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">ITG Store Locator</string>
+   <string name="app_name" >ITG Brands Store Locator</string>
+  <string name="activity_label_mapwithmarkers">Store Locations</string>
+  <string name="activity_description_mapwithmarkers">Shows Stores and Brands in Area.</string>
+
+</resources>

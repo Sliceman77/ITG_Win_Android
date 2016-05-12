@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://tradeservice.concinnitymarketing.biz/tradeservice.asmx?wsdl" docRef="http://tradeservice.concinnitymarketing.biz/tradeservice.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://tradeservice.concinnitymarketing.biz/tradeservice.asmx" xmlns:q1="http://tradeservice.concinnitymarketing.biz/" binding="q1:TradeServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://tradeservice.concinnitymarketing.biz/tradeservice.asmx" xmlns:q2="http://tradeservice.concinnitymarketing.biz/" binding="q2:TradeServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>
