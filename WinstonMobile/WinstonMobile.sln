@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinstonMobile.Droid", "Wins
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinstonMobile", "WinstonMobile\WinstonMobile\WinstonMobile.csproj", "{D4ADA101-3808-47CD-8872-9FC29E9AB5A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreLocator", "..\..\ITGB Mobile Android\StoreLocator\StoreLocator.csproj", "{F1302C52-1755-48FD-B1F9-F50D972681F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreLocator", "..\StoreLocator\StoreLocator.csproj", "{F1302C52-1755-48FD-B1F9-F50D972681F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
