@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+	<!-- COLORS -->
+	<color name="primary">@color/AccentColor</color>
+	<color name="primary_dark">@color/AccentColor</color>
+	<color name="actionbar_tab_indicator">@color/AccentColor</color>
+
+
+	<!-- Theme -->
+	<style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+		<item name="android:colorAccent">@color/AccentColor</item>
+		<item name="android:actionBarStyle">@style/MyActionBar</item>
+
+		<!-- Used on ListView selected items -->
+		<item name="android:color">@color/AccentColor</item>
+		<item name="android:colorPressedHighlight">@color/AccentColor</item>
+		<item name="android:colorLongPressedHighlight">@color/AccentColor</item>
+		<item name="android:colorFocusedHighlight">@color/AccentColor</item>
+		<item name="android:colorActivatedHighlight">@color/AccentColor</item>
+		<item name="android:activatedBackgroundIndicator">@color/AccentColor</item>
+
+		<item name="android:alertDialogTheme">@style/AppTheme.DialogTheme</item>
+		<item name="android:dialogTheme">@style/AppTheme.DialogTheme</item>
+
+	</style>
+
+
+	<!-- STYLES -->
+	<style name="AppTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+
+	<style name="MyActionBar"
+		parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
+		<item name="android:background">@color/AccentColor</item>
+		<item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleTextStyle</item>
+	</style>
+
+	<!-- ActionBar tabs styles -->
+	<style name="MyActionBarTabs"
+		parent="@android:style/Widget.Holo.ActionBar.TabView">
+		<!-- tab indicator -->
+		<item name="android:background">@color/actionbar_tab_indicator</item>
+	</style>
+
+
+	<!-- Splash styles -->
+	<style name="Theme.Splash" parent="android:Theme">
+		<item name="android:windowBackground">@drawable/splash</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowIsTranslucent">false</item>
+		<item name="android:windowIsFloating">false</item>
+		<item name="android:backgroundDimEnabled">true</item>
+	</style>
+
+	<!-- Local copy of android:Theme.Holo.Dialog.Alert -->
+	<style name="HoloBaseDialogTheme" parent="@android:style/Theme.Holo.Light.Dialog">
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowTitleStyle">@style/DialogWindowTitleHolo</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+		<item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+
+		<item name="android:textColorAlertDialogListItem">@color/AccentColor</item>
+
+		<item name="android:divider">@null</item>
+	</style>
+
+		<!-- Local copy of android:DialogWindowTitle.Holo -->
+		<style name="DialogWindowTitleHolo">
+			<item name="android:maxLines">1</item>
+			<item name="android:scrollHorizontally">true</item>
+			<item name="android:textAppearance">@android:style/TextAppearance.Holo.DialogWindowTitle</item>
+		</style>
+
+			<style name="AppTheme.DialogTheme" parent="@style/HoloBaseDialogTheme">
+				<item name="android:windowTitleStyle">@style/DialogWindowTitle.AppTheme</item>
+				<item name="android:borderlessButtonStyle">@style/Widget.AppTheme.Button.Borderless</item>
+				<item name="android:buttonBarStyle">@style/AppTheme.ButtonBar.AlertDialog</item>
+			</style>
+
+
+
+	<style name="Widget.AppTheme.Button.Borderless" parent="@android:style/Widget.Holo.Button.Borderless">
+		<item name="android:textColor">#FFFFFF</item>
+		<item name="android:textAppearance">@style/TextAppearance.AppTheme.DialogButton</item>
+	</style>
+	 
+	<style name="TextAppearance.AppTheme.DialogButton" parent="@android:style/TextAppearance.Holo.Medium"></style>
+	 
+	<style name="AppTheme.ButtonBar.AlertDialog" parent="@android:style/Holo.Light.ButtonBar.AlertDialog">
+		<item name="android:background">@color/AccentColor</item>
+	</style>
+
+
+
+
+	<style name="DialogWindowTitle.AppTheme" parent="@style/DialogWindowTitleHolo">
+		<item name="android:textAppearance">@style/AppTheme.TextAppearance.DialogWindowTitle</item>
+	</style>
+	 
+		<style name="AppTheme.TextAppearance.DialogWindowTitle" parent="@android:style/TextAppearance.Holo.DialogWindowTitle">
+			<item name="android:textColor">@color/AccentColor</item>
+		</style>
+
+
+</resources>

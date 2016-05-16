@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+	<!-- COLORS -->
+	<color name="primary">@color/AccentColor</color>
+	<color name="primary_dark">@color/AccentColor</color>
+	<color name="actionbar_tab_indicator">@color/AccentColor</color>
+
+	<!-- STYLES -->
+	<style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
+		<!--
+		<item name="android:colorPrimary">@color/primary</item>
+		<item name="android:colorPrimaryDark">@color/primary_dark</item>
+		-->
+		<item name="android:colorAccent">@color/AccentColor</item>
+		<!--
+		<item name="android:statusBarColor">#FF0000</item>
+		<item name="android:actionBarStyle">@style/MyActionBar</item>-->
+		<!--
+		<item name="android:windowActionBarOverlay">true</item>
+		-->
+
+		<!-- Used on ListView selected items -->
+		<item name="android:color">@color/AccentColor</item>
+		<item name="android:colorPressedHighlight">@color/AccentColor</item>
+		<item name="android:colorLongPressedHighlight">@color/AccentColor</item>
+		<item name="android:colorFocusedHighlight">@color/AccentColor</item>
+		<item name="android:colorActivatedHighlight">@color/AccentColor</item>
+		<item name="android:activatedBackgroundIndicator">@color/AccentColor</item>
+
+
+		<!-- Main theme colors -->
+		<!--   your app branding color for the app bar -->
+		<item name="android:colorPrimary">@color/primary</item>
+		<!--   darker variant for the status bar and contextual app bars 
+		<item name="android:colorPrimaryDark">@color/primary_dark</item>-->
+		<!--   theme UI controls like checkboxes and text fields -->
+		<item name="android:colorAccent">@color/AccentColor</item>
+
+		<item name="android:dialogTheme">@style/Theme.Dialog</item> <!-- TimePicker dialog -->
+		<item name="android:alertDialogTheme">@style/Theme.Dialog</item> <!-- Alert dialog -->
+
+
+		<!--
+			Base application theme for API 21+. This theme replaces
+			MyTheme from resources/values/styles.xml on API 21+ devices.
+		-->
+
+		<item name="android:windowContentTransitions">true</item>
+		<item name="android:windowAllowEnterTransitionOverlap">true</item>
+		<item name="android:windowAllowReturnTransitionOverlap">true</item>
+		<item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+		<item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+
+	</style>
+
+
+
+	<!-- ActionBar tabs styles -->
+	<style name="MyActionBarTabs"
+		parent="@android:style/Widget.Material.ActionBar.TabView">
+		<!-- tab indicator -->
+		<item name="android:background">@color/actionbar_tab_indicator</item>
+	</style>
+
+	<!-- DatePicker styles -->
+	<style name="MyDatePickerDialogTheme" parent="android:Theme.Material.Light.Dialog">
+		<item name="android:colorAccent">@color/AccentColor</item>
+	</style>
+
+	<style name="Theme.Dialog"
+		parent="android:Theme.Material.Light.Dialog">
+		<item name="android:colorAccent">@color/AccentColor</item>
+	</style>
+
+	<!-- Splash styles -->
+	<style name="Theme.Splash" parent="android:Theme">
+		<item name="android:windowBackground">@drawable/splash</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowIsTranslucent">false</item>
+		<item name="android:windowIsFloating">false</item>
+		<item name="android:backgroundDimEnabled">true</item>
+	</style>
+
+</resources>

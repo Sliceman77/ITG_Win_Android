@@ -9,7 +9,15 @@ using Android.OS;
 
 namespace WinstonMobile.Droid
 {
-    [Activity(Label = "WinstonMobile", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    //[Activity(Label = "WinstonMobile", 
+    //          Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(
+    Label = "Winston Mobile",
+    Theme = "@style/AppTheme",
+    Icon = "@android:color/transparent",
+    MainLauncher = false)
+]
+
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
