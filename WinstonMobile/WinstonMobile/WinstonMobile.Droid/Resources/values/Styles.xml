@@ -2,23 +2,23 @@
 <resources>
 
 	<!-- COLORS -->
-	<color name="primary">@color/TestAccentColor</color>
-	<color name="primary_dark">@color/TestAccentColor</color>
-	<color name="actionbar_tab_indicator">@color/TestAccentColor</color>
+	<color name="primary">@color/AccentColor</color>
+	<color name="primary_dark">@color/AccentColor</color>
+	<color name="actionbar_tab_indicator">@color/AccentColor</color>
 
 
 	<!-- Theme -->
 	<style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-		<item name="android:colorAccent">@color/TestAccentColor</item>
+		<item name="android:colorAccent">@color/AccentColor</item>
 		<item name="android:actionBarStyle">@style/MyActionBar</item>
 
 		<!-- Used on ListView selected items -->
-		<item name="android:color">@color/TestAccentColor</item>
-		<item name="android:colorPressedHighlight">@color/TestAccentColor</item>
-		<item name="android:colorLongPressedHighlight">@color/TestAccentColor</item>
-		<item name="android:colorFocusedHighlight">@color/TestAccentColor</item>
-		<item name="android:colorActivatedHighlight">@color/TestAccentColor</item>
-		<item name="android:activatedBackgroundIndicator">@color/TestAccentColor</item>
+		<item name="android:color">@color/AccentColor</item>
+		<item name="android:colorPressedHighlight">@color/AccentColor</item>
+		<item name="android:colorLongPressedHighlight">@color/AccentColor</item>
+		<item name="android:colorFocusedHighlight">@color/AccentColor</item>
+		<item name="android:colorActivatedHighlight">@color/AccentColor</item>
+		<item name="android:activatedBackgroundIndicator">@color/AccentColor</item>
 
 		<item name="android:alertDialogTheme">@style/AppTheme.DialogTheme</item>
 		<item name="android:dialogTheme">@style/AppTheme.DialogTheme</item>
@@ -33,7 +33,7 @@
 
 	<style name="MyActionBar"
 		parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
-		<item name="android:background">@color/TestAccentColor</item>
+		<item name="android:background">@color/AccentColor</item>
 		<item name="android:titleTextStyle">@style/AppTheme.ActionBar.TitleTextStyle</item>
 	</style>
 
@@ -62,7 +62,7 @@
 		<item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
 		<item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
 
-		<item name="android:textColorAlertDialogListItem">@color/TestAccentColor</item>
+		<item name="android:textColorAlertDialogListItem">@color/AccentColor</item>
 
 		<item name="android:divider">@null</item>
 	</style>
@@ -90,7 +90,7 @@
 	<style name="TextAppearance.AppTheme.DialogButton" parent="@android:style/TextAppearance.Holo.Medium"></style>
 	 
 	<style name="AppTheme.ButtonBar.AlertDialog" parent="@android:style/Holo.Light.ButtonBar.AlertDialog">
-		<item name="android:background">@color/TestAccentColor</item>
+		<item name="android:background">@color/AccentColor</item>
 	</style>
 
 
@@ -101,7 +101,7 @@
 	</style>
 	 
 		<style name="AppTheme.TextAppearance.DialogWindowTitle" parent="@android:style/TextAppearance.Holo.DialogWindowTitle">
-			<item name="android:textColor">@color/TestAccentColor</item>
+			<item name="android:textColor">@color/AccentColor</item>
 		</style>
 
 

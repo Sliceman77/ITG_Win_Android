@@ -15,7 +15,7 @@ namespace WinstonMobile.Droid
     Label = "Winston Mobile",
     Theme = "@style/AppTheme",
     Icon = "@android:color/transparent",
-    MainLauncher = false)
+    MainLauncher = true)
 ]
 
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity

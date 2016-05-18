@@ -4,7 +4,7 @@
              	Title="Login"
              x:Class="WinstonMobile.Login"
   xmlns:artina="clr-namespace:UXDivers.Artina.Shared;assembly=UXDivers.Artina.Shared"
-  xmlns:commonViews="clr-namespace:UXDivers.Artina.Grial;assembly=UXDivers.Artina.Grial"
+  xmlns:commonViews="clr-namespace:WinstonMobile;assembly=WinstonMobile"
   BackgroundColor="White"
   BackgroundImage="{ StaticResource SignUpBackgroundImage }"
   >
