@@ -18,9 +18,10 @@
 			VerticalOptions="FillAndExpand" >
 
       <Grid.RowDefinitions>
-        <RowDefinition Height="100" />
+        <RowDefinition Height="50" />
         <RowDefinition Height="*" />
-        <RowDefinition Height="100" />
+        <RowDefinition Height="50" />
+        <RowDefinition Height="50" />
       </Grid.RowDefinitions>
 
       <!-- LOGO -->
@@ -45,12 +46,12 @@
 
       <!---FIELDS CONTAINER-->
       <Grid
-				Padding="40, 0"
+				Padding="20, 0"
 				ColumnSpacing="0"
 				RowSpacing="0"
 				VerticalOptions="CenterAndExpand"
 				Grid.Row="1"
-				HeightRequest="160">
+				HeightRequest="100">
 
         <StackLayout
 					Grid.Row="0"
@@ -76,6 +77,18 @@
 					Style="{DynamicResource ArtinaLoginEntryStyle}"
 					VerticalOptions="StartAndExpand" />
 
+        <StackLayout
+					Grid.Row="3"
+          HorizontalOptions="Fill"
+          VerticalOptions="EndAndExpand"
+          Padding="20">
+
+          <Button
+            Style="{DynamicResource PrimaryActionButtonStyle}"
+            VerticalOptions="End"
+            Text="Forgot Username or Password" />
+        </StackLayout>
+
       </Grid>
 
 
@@ -90,6 +103,12 @@
 					Style="{DynamicResource PrimaryActionButtonStyle}"
 					VerticalOptions="End"
 					Text="Login" />
+        <Label
+       HorizontalOptions="Start"
+         Text=" Not Registered yet? " 
+          Style="{DynamicResource ValidationEntryErrorStyle}"
+						/>
+
       </StackLayout>
 
     </Grid>

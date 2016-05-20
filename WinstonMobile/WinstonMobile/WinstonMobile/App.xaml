@@ -21,7 +21,7 @@
 				to see your changes on your App
 			-->
       <!-- Export AccentColor -->
-      <Color x:Key="AccentColor">#FFDA125F</Color>
+      <Color x:Key="AccentColor">#990000</Color>
       <!-- Export InverseTextColor -->
       <Color x:Key="InverseTextColor">White</Color>
 
@@ -97,7 +97,8 @@
       <FileImageSource x:Key="HamburguerIcon" File="hamburguer_icon.png" />
       <FileImageSource x:Key="WelcomeBackgroundImage" File="welcome_bg.jpg" />
 
-      <FileImageSource x:Key="BrandImage" File="logo.png" />
+      <FileImageSource x:Key="BrandImage" File="itg-logo.png" />
+      <FileImageSource x:Key="PackImage" File="pack-small.png" />
 
       <FileImageSource x:Key="LoginBackgroundImage" File="signup_bg.jpg" />
       <FileImageSource x:Key="SignUpBackgroundImage" File="signup_bg.jpg" />
