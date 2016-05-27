@@ -19,8 +19,8 @@
 
       <Grid.RowDefinitions>
         <RowDefinition Height="50" />
-        <RowDefinition Height="*" />
         <RowDefinition Height="50" />
+        <RowDefinition Height="*" />
         <RowDefinition Height="50" />
       </Grid.RowDefinitions>
 
@@ -42,7 +42,10 @@
           <TapGestureRecognizer Tapped="OnCloseButtonClicked" />
         </Label.GestureRecognizers>
       </Label>
-
+      
+      <!--Dynamic Message Area-->
+      <Label x:Name="greetingOutput"
+             				Grid.Row="1"/>
 
       <!---FIELDS CONTAINER-->
       <Grid
@@ -50,14 +53,14 @@
 				ColumnSpacing="0"
 				RowSpacing="0"
 				VerticalOptions="CenterAndExpand"
-				Grid.Row="1"
+				Grid.Row="2"
 				HeightRequest="100">
 
         <StackLayout
 					Grid.Row="0"
 					VerticalOptions="StartAndExpand" >
           <!---EMAIL FIELD-->
-          <Entry
+          <Entry x:Name="txtemail"
 						Placeholder="E-mail"
 						Style="{DynamicResource ArtinaLoginEntryStyle}" />
 
@@ -97,12 +100,12 @@
 				HorizontalOptions="Fill"
 				VerticalOptions="EndAndExpand"
 				Padding="20"
-				Grid.Row="2" >
+				Grid.Row="3" >
 
         <Button
 					Style="{DynamicResource PrimaryActionButtonStyle}"
 					VerticalOptions="End"
-					Text="Login" />
+					Text="Login" Click="Login_Click"/>
         <Label
        HorizontalOptions="Start"
          Text=" Not Registered yet? " 

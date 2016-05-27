@@ -46,6 +46,10 @@ namespace WinstonMobile
             }
             return false;
         }
+        private void Login_Click(object sender, EventArgs e)
+        {
+            greetingOutput.Text = "Hello, " + txtemail.Text + "!";
+        }
 
     }
 }
